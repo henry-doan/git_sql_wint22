@@ -6,8 +6,8 @@ def display_git(cmd)
 end
 
 def menu
-  print '1: Enter git command'.colorize(:blue)
-  print '2: Exit'.colorize(:red)
+  puts '1) Please Enter git command'.colorize(:blue)
+  puts '2) Exit'.colorize(:red)
   choice = gets.to_i
   case choice
   when 1
@@ -15,7 +15,7 @@ def menu
     display_git(gets.strip)
     menu
   when 2
-    print 'Good-bye'.colorize(:green)
+    puts 'See you later'.colorize(:green)
     exit
   else
     puts 'Invalid choice'.colorize(:red)
