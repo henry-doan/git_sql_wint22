@@ -13,6 +13,7 @@ def menu
     puts_git(gets.strip)
     menu
   when 2
+    puts 'Goodbye'
     exit
   else
     puts 'Invalid choice'
