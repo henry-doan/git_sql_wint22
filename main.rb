@@ -1,7 +1,7 @@
 require('colorize')
 
-def puts_git(cmd)
-  puts `git #{cmd} -h`
+def display_git(cmd)
+  puts `git #{cmd} -h`.colorize(:blue)
   menu
 end
 
@@ -11,8 +11,8 @@ def menu
   choice = gets.to_i
   case choice
   when 1
-    puts 'Enter git command'.colorize(:yellow)
-    puts_git(gets.strip)
+    puts 'Please Enter git command'.colorize(:yellow)
+    display_git(gets.strip)
     menu
   when 2
     puts 'Goodbye'.colorize(:green)
